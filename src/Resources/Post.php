@@ -42,13 +42,6 @@ class Post implements JsonSerializable
 
     protected $content;
 
-    /**
-     * 文章作者ID
-     *
-     * @var [integer]
-     */
-    protected $author;
-
     protected $excerpt;
 
     /**
@@ -116,7 +109,6 @@ class Post implements JsonSerializable
         $this->password       = '';
         $this->title          = '';
         $this->content        = '';
-        $this->author         = 1;
         $this->excerpt        = '';
         $this->comment_status = self::STATUS_COMMENT_OPEN;
         $this->meta           = [];
