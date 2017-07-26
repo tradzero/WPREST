@@ -26,7 +26,7 @@ Edit `/pathto/config/app.php`
 ```php
 'providers' => [
     // Other service providers...
-    Tradzero\Uploader\UploaderServiceProvider::class,
+    Tradzero\WPREST\WPRESTServiceProvider::class,
 ],
 ```
 
