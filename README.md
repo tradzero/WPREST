@@ -19,7 +19,7 @@ when you installed, you need to [configure](https://wordpress.org/plugins/jwt-au
 
 # Install
 
-`$ composer require tradzero/WPREST:dev-master -vvv`
+`$ composer require tradzero/wp_rest_laravel:dev-master -vvv`
 
 Edit `/pathto/config/app.php`
 
