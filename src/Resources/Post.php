@@ -6,7 +6,7 @@ use JsonSerializable;
 use Datetime;
 use DateTimeZone;
 
-class Posts implements JsonSerializable
+class Post implements JsonSerializable
 {
     const STATUS_POST_PUBLISH = 'publish';
     const STATUS_POST_FUTURE  = 'future';
@@ -16,6 +16,8 @@ class Posts implements JsonSerializable
 
     const STATUS_COMMENT_OPEN = 'open';
     const STATUS_COMMENT_CLOSE = 'closed';
+
+    protected $id;
 
     protected $date;
 
@@ -90,6 +92,16 @@ class Posts implements JsonSerializable
     public function setContent($content)
     {
         $this->content = $content;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    public function getId()
+    {
+        return $this->id;
     }
 
     public function jsonSerialize()
