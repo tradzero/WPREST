@@ -2,7 +2,7 @@
     "name": "tradzero/wp_rest_laravel",
     "type": "library",
     "require": {
-        "guzzle/guzzle": "~6.0"
+        "guzzle/guzzle": "~6.2"
     },
     "license": "MIT",
     "authors": [
