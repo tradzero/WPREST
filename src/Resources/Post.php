@@ -82,6 +82,15 @@ class Post implements JsonSerializable
         $this->updateSlug();
     }
 
+    public function setCategories(array $categories)
+    {
+        foreach ($categories as $category) {
+            if ($category->getId()) {
+                array_push($this->categories, $category->getId());
+            }
+        }
+    }
+
     public function setContent($content)
     {
         $this->content = $content;
