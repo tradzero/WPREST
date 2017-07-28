@@ -1,5 +1,5 @@
 # WPREST
-laravel package for easy use wordpress rest api, only provide post's create and update at this version.
+laravel package for easy use wordpress rest api, only provide post, category create and update at this version.
 
 # Prepare
 
@@ -51,11 +51,23 @@ enter your wordpress endpoint and account infomation.
 
 ```php
 use Tradzero\WPREST\Resources\Post;
+use Tradzero\WPREST\Resources\Category;
 use WPREST;
 
 $post = new Post();
 $post->setTitle('hello world');
 $post->setContent('Its post created using WP REST API');
 
+WPREST::createPost($post);
+
+$post->setId('XX');
+WPREST::updatePost($post);
+
+$category = new Category;
+$category->setName('category 1');
+WPREST::findCategoryOrCreate($category);
+// or
+WPREST::createCategory($category);
+$post->setCategories(array($category));
 WPREST::createPost($post);
 ```
